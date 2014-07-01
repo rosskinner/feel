@@ -1,0 +1,118 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+header {
+  text-align:center;
+  position:relative;
+}
+
+header h1 {
+    display:inline-block;
+    width:300px;
+}
+
+nav {
+  display:inline-block;
+  width:400px;
+  position:absolute;
+  top:30px;
+}
+
+nav ul {
+  padding:0;
+
+}
+
+nav li {
+  list-style:none;
+  display:inline-block;
+  margin:10px;
+}
+
+a {
+  text-decoration:none;
+  color:#ccc;
+}
+
+nav img {
+  vertical-align:middle;
+  padding-right:10px;
+}
+
+.nav_right {
+  text-align:right;
+}
+
+h1,h2,h3,h4 {
+  font-family: 'Lobster', cursive;
+}
+
+h1 {
+  font-size:3em;
+}
+
+.user img {
+  width: 300px;
+  border-radius:100%;
+}
+
+.icon {
+  width:30px;
+}
+
+form {
+  width:240px;
+  margin:0 auto;
+}
+
+input {
+  background: #FFF;
+  padding:10px 20px;
+  border: 1px solid #ccc;
+  border-radius:5px;
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+  display:block;
+  margin:10px auto;
+}
+
+input[type="submit"] {
+  border:4px solid #77C299;
+  color: #77C299;
+  min-width:100px;
+  text-align:center;
+}
+
+input[value="Login"] {
+  width:240px;
+  margin-top: 30px;
+}
+
+.button {
+  background: #FFF;
+  border:4px solid #77C299;
+  padding:10px 20px;
+  color: #77C299;
+  min-width:100px;
+  border-radius:5px;
+  text-align:center;
+  margin:0 auto;
+
+}
+
+.user {
+  width:400px;
+  text-align:center;
+  margin: 0 auto;
+}
+
+.button a {
+  text-decoration: none;
+  color:inherit;
+}

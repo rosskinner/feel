@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feel</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+    <section class="container">
+      <header>
+        <h1>feel</h1>
+        <nav>
+          <ul>
+             <%== smartnav_right %>
+          </ul>
+        </nav>
+      </header>
+
+      <% if flash[:notice].present? %>
+          <div class= "notice">
+            <%= flash[:notice] %>
+          </div>
+      <% end %>
+      <%= yield %>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+%section.user
+  = image_tag(@user.avatar) if @user.avatar
+  %h2
+    = @user.username
+  %div.button
+    =link_to('Edit',edit_user_path)
