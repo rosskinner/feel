@@ -7,36 +7,59 @@ class LocationsController < ApplicationController
   end
 
   def create
-    $location = Location.new location_params
-    if $location.save
-      @current_user.locations << $location
+    @location = Location.new location_params
+    @place = Geocoder.coordinates(@location.place)
+    @location.long = @place.first
+    @location.lat = @place.last
+    if @location.save
+      @current_user.locations << @location
+
+      # raise params.inspect
+
       redirect_to locations_path
     else
-      raise params.inspect
+      # raise params.inspect
       render :new
+
     end
   end
 
   def index
-    $location = Location.new
-    $locations = @current_user.locations
+    @location = Location.new
+    @locations = @current_user.locations
+    # raise params.inspect
   end
 
   def show
-    $location = Location.find params[:id]
-    $place = Geocoder.coordinates($location.place)
+    @client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = "IvtR98I8pUhsRv2aoDrhtkXTi"
+      config.consumer_secret     = "dKNsuFZOKA9ysxfYmEBh0wnF4ezBk8nYxjQvVXSeHtXXn0UrGJ"
+      config.access_token        = "2497635019-T4FsRE3oHHDZu4Hq2B3QzsgIH154yC6F18xSDwV"
+      config.access_token_secret = "293BVRX1izmQ4kcOiDUykehtZCvh9nz9l3iq2n3T620bl"
+    end
+
+    @location = Location.find params[:id]
+    @mood = @client.search('excited', :geocode => "#{@location.long},#{@location.lat},#{@location.radius}km")
+
+    # raise params.inspect
+
   end
 
   def edit
-    $location = Location.find params[:id]
-    $place = Geocoder.coordinates($location.place)
+    @location = Location.find params[:id]
     render :edit
 
   end
 
   def update
-    $location = Location.find params[:id]
-    $location.update(location_params)
+    @location = Location.find params[:id]
+    @location.update(location_params)
+    @place = Geocoder.coordinates(@location.place)
+    @location.long = @place.first
+    @location.lat = @place.last
+    if @location.save
+      @current_user.locations << @location
+    end
     redirect_to locations_path
   end
 

@@ -7,10 +7,23 @@ class MoodsController < ApplicationController
       config.access_token        = "2497635019-T4FsRE3oHHDZu4Hq2B3QzsgIH154yC6F18xSDwV"
       config.access_token_secret = "293BVRX1izmQ4kcOiDUykehtZCvh9nz9l3iq2n3T620bl"
     end
-
-    @locations = @current_user.locations
-    @long = $place.first
-    @lat = $place.last
-    @mood = @client.search('happy', :geocode => "#{@long},#{@lat},1mi")
+    @location = Location.find params[:id]
+    # @location = @current_user.locations
+    @long = @location.long
+    @lat = @location.lat
+    @mood = @client.search('excited', :geocode => "#{@long},#{@lat},1mi")
   end
+
+  def create
+    @location = Location.find params[:id]
+    # @location = @current_user.locations
+    @long = @location.long
+    @lat = @location.lat
+    @mood = @client.search('excited', :geocode => "#{@long},#{@lat},1mi")
+  end
+
+  def show
+    @location = Location.find params[:id]
+  end
+
 end
