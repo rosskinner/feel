@@ -4,11 +4,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+  margin:0;
+  border-top:5px solid #77C299;
 }
 
 header {
   text-align:center;
   position:relative;
+  margin:0;
 }
 
 header h1 {
@@ -130,4 +133,9 @@ input[value="Login"] {
 
 .avatar {
   border-radius:100%;
+}
+
+.content {
+  width:400px;
+  margin:0 auto;
 }
