@@ -1,6 +1,6 @@
 <%= render :partial => 'form' %>
 <%= @location.place %>
-<li><%= @mood.count %></li>
-<% @mood.entries.map do |e| %>
-<li><%=  e.full_text %></li>
+<% @moods.each do |mood| %>
+<h2><%= mood.mood %></h2>
+<%= mood.count %>
 <% end %>
