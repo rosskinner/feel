@@ -1,8 +1,10 @@
-- @gps_location = request.location
+- @gps = request.location
+- @gps_location = Geocoder.search(@gps)
+- @gps_location = @gps_location.first
 
 = form_for @location do |f|
   = f.label :place
-  = f.text_field :place, :autofocus => true, :value => @gps_location.city, :required => true
+  = f.text_field :place, :autofocus => true, :value => @gps_location, :required => true
 
   = f.label :radius, "Area Radius (km)"
   = f.number_field :radius

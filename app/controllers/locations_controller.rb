@@ -12,7 +12,6 @@ class LocationsController < ApplicationController
   end
 
   def show
-    # @tweet_count = get_moods (params[:id])
     @location = Location.find (params[:id])
     @moods = @location.moods.take(3)
     @time = @location.created_at
