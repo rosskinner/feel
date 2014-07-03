@@ -5,8 +5,9 @@
 <% @moods.each do |mood| %>
 <%  bubble += 1%>
   <div class="bubble no<%=bubble %>">
-    <h3><span style="font-size:0.2em">feeling </span><%= mood.mood %></h3>
-    <span><%= mood.count %><span> <span style="font-size:0.2em">people are</span>
+  <span><%= mood.count %><span> <span style="font-size:0.2em; line_height: 0.4em">people are</span>
+    <h3><span style="font-size:0.2em; line-height:0.4em">feeling</span><%= mood.mood %></h3>
+
   </div>
 <% end %>
 </div>
