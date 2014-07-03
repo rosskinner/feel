@@ -1,6 +1,6 @@
-  <div style="color:<%= "#FFF" if (params[:controller] != "users" && params[:action] != "new")%>;">
+  <div style="color:<%= "#FFF" if (params[:controller] == "users" && params[:action] == "new")%>;">
+  <%= render :partial => 'form' %>
   <% if @user.errors.any? %>
-   <%= render :partial => 'form' %>
    <div class="notice" style="color:#373736">
     <p>DO IT PROPERLY YOU BASTARD!</p>
     <ol>
@@ -12,5 +12,6 @@
     </ol>
    <% end %>
    </div>
+   <%== login  %>
    </div>
 

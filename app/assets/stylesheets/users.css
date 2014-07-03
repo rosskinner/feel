@@ -74,18 +74,16 @@ h1 {
   font-size:3em;
 }
 
-.user {
-  padding-top:20px;
-  max-width:500px;
-  /*margin:0 auto;*/
-  text-align:center;
-  display:inline-block;
-
-}
-
 .user img {
   width: 300px;
   border-radius:100%;
+}
+
+.user {
+  padding-top:20px;
+  text-align:center;
+  display:inline-block;
+  width:500px;
 }
 
 .info {
