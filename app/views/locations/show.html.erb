@@ -1,12 +1,12 @@
 <h2><%= @location.place %></h2>
-<%= @time %>
+<%= time_tag(@time) %>
 <div class="results">
 <%  bubble = 0 %>
 <% @moods.each do |mood| %>
 <%  bubble += 1%>
   <div class="bubble no<%=bubble %>">
     <h3><%= mood.mood %></h3>
-    <span><%= mood.count %></span>
+    <span><%= mood.count %><span>
   </div>
 <% end %>
 </div>

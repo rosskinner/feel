@@ -239,7 +239,7 @@ li {
 }
 
 .results {
-
+  margin-top: 50px;
 }
 
 .bubble {
@@ -247,16 +247,17 @@ li {
   text-align:center;
   margin:10px auto;
   position:relative;
+  color:#FFF;
 }
 
 .no1 {
   width: 200px;
   height: 200px;
   border-radius: 100% 100% 0 100%;
-  left:-81px;
+  left:-85px;
   position:relative;
   font-size:3em;
-  /*display:inline-block;*/
+  background:url(ocean.jpg)0px 0px;
 }
 
 .no2 {
@@ -265,6 +266,7 @@ li {
   border-radius: 100% 0 100% 100%;
   display:inline-block;
   font-size:2em;
+  background:url(ocean.jpg)0px 200px;
 }
 
 .no3 {
@@ -274,25 +276,25 @@ li {
   display:inline-block;
   margin-left:10px;
   font-size:1em;
+  vertical-align:top;
+  background:url(ocean.jpg)100px 200px;
 }
 
 .bubble h3 {
   position:absolute;
   font-family: 'Roboto', sans-serif;
   font-weight:100;
+  left:30px;
 }
 
 .no1 h3 {
   top:0;
-  left:30px;
 }
 
 .no2 h3 {
   top:20px;
-  left:30px;
 }
 
 .no3 h3 {
-  top:0;
-  left:30px;
+  top:15px;
 }
