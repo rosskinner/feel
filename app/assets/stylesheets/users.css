@@ -255,7 +255,7 @@ li {
   left:-85px;
   position:relative;
   font-size:3em;
-  background:url(ocean.jpg)0px 0px;
+  background:url(/images/ocean.jpg)0px 0px;
 }
 
 .no2 {
@@ -264,7 +264,7 @@ li {
   border-radius: 100% 0 100% 100%;
   display:inline-block;
   font-size:2em;
-  background:url(ocean.jpg)0px 200px;
+  background:url(/images/ocean.jpg)0px 200px;
 }
 
 .no3 {
@@ -275,7 +275,7 @@ li {
   margin-left:10px;
   font-size:1em;
   vertical-align:top;
-  background:url(ocean.jpg)100px 200px;
+  background:url(/images/ocean.jpg)100px 200px;
 }
 
 .bubble h3 {
