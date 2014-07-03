@@ -1,12 +1,13 @@
+<div style="color:#FFF">
+  <%= form_tag ('/login') %>
+    <%= label_tag 'username', 'Username' %>
+    <%= text_field_tag 'username' %>
 
-<%= form_tag ('/login') %>
-  <%= label_tag 'username', 'Username' %>
-  <%= text_field_tag 'username' %>
-
-  <%= label_tag 'password', 'Password' %>
-  <%= password_field_tag 'password' %>
+    <%= label_tag 'password', 'Password' %>
+    <%= password_field_tag 'password' %>
 
 
-  <%= submit_tag "Login" %>
-  <%==sign_up%>
+    <%= submit_tag "Login", :style => "background: rgba(0,0,0,0)" %>
+    <%==sign_up%>
+</div>
 

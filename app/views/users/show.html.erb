@@ -1,0 +1,31 @@
+<% if @current_user == @user %>
+  <section class="user">
+    <%= image_tag(@user.avatar) if @user.avatar %>
+    <div class="info">
+    <h2>
+      <%= @user.username %>
+    </h2>
+    <h3>
+      Locations:
+    </h3>
+
+      <ul>
+
+        <% @locations.each do |location|%>
+          <li>
+            <span><%= link_to(location.place, location)%> | Radius: <%= location.radius %></span>
+            <div class="button edit">
+            <%= link_to('Edit', edit_location_path(location)) %> | <%= link_to('Delete', location, :data =>{:confirm=>'Are you sure you want to do delete this location?',:method => :delete }) %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+
+
+
+    </div>
+    <div class="button left">
+      <%= link_to('Edit User',edit_user_path) %>
+    </div>
+  </section>
+<% end %>

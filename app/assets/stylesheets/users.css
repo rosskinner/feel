@@ -6,6 +6,10 @@ body {
   font-weight: 100;
   margin:0;
   border-top:5px solid #77C299;
+  /*background-image:url(http://payload267.cargocollective.com/1/14/450171/7641443/20130318-DSC_4113-Edit_o.jpg);*/
+  background-size:cover;
+  background-position:0;
+  background-attachment: fixed;
 }
 
 header {
@@ -39,7 +43,7 @@ nav li {
 
 a {
   text-decoration:none;
-  color:#ccc;
+  color:#373736;
 }
 
 nav img {
@@ -59,14 +63,32 @@ h1 {
   font-size:3em;
 }
 
+.user {
+  padding-top:20px;
+  max-width:700px;
+  margin:0 auto;
+
+}
+
 .user img {
   width: 300px;
   border-radius:100%;
 }
 
+.info {
+  display: block;
+  margin-left: 50px;
+  vertical-align: top;
+}
+
+.info br {
+  display:inline-block;
+}
+
 .icon {
   width:30px;
 }
+
 
 form {
   width:240px;
@@ -105,14 +127,30 @@ input[value="Login"] {
   min-width:100px;
   border-radius:5px;
   text-align:center;
-  margin:0 auto;
-
+  margin:20px auto;
 }
 
-.user {
-  width:400px;
-  text-align:center;
+.edit, .edit a {
+  display:inline-block;
+}
+
+.edit {
+  padding:5px;
+  border:1px solid;
+  margin-left:20px;
+}
+
+.info li {
+  list-style:none;
+}
+
+.users {
   margin: 0 auto;
+  text-align:center;
+}
+.users img {
+  width:200px;
+  border-radius:100%;
 }
 
 .button a {
@@ -126,16 +164,31 @@ input[value="Login"] {
   list-style:none;
 }
 
-.users img {
-  width:300px;
-  border-radius:100%;
-}
-
 .avatar {
   border-radius:100%;
 }
 
 .content {
-  width:400px;
+  width:80%;
   margin:0 auto;
+}
+
+.notice {
+  width:400px;
+  padding:30px 80px;
+  color:#FFF;
+  margin:0 auto;
+  text-align:center;
+}
+
+.grid {
+  width:300px;
+  display:inline-block;
+  vertical-align:top;
+  text-align:center;
+}
+
+.left {
+  margin:0;
+  max-width:250px;
 }

@@ -1,7 +1,0 @@
--if @user.errors.any?
-  %h1 DO IT PROPERLY YOU BASTARD!
-  %ol
-    -@user.errors.full_messages.each do |msg|
-      %li= msg
-
-= render :partial => 'form'

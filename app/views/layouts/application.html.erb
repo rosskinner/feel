@@ -4,12 +4,13 @@
   <title>Feel</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
-  <body>
+  <body style="background-image:url(<%= "http://payload267.cargocollective.com/1/14/450171/7641443/20130318-DSC_4113-Edit_o.jpg" if (params[:controller] == "session" && params[:action] == "new") %>);">
     <section class="container">
       <header>
-        <h1><%= link_to("feel",locations_path) %></h1>
+      <h1><a href="/" style="color:<%= "#FFF" if (params[:controller] == "session" && params[:action] == "new") %>;">feel</a></h1>
         <nav>
           <ul>
              <%== smartnav_right %>
@@ -17,13 +18,15 @@
         </nav>
       </header>
 
+
+      <section class="content">
+
+      <%= yield %>
       <% if flash[:notice].present? %>
           <div class= "notice">
             <%= flash[:notice] %>
           </div>
       <% end %>
-      <section class="content">
-      <%= yield %>
       </section>
     </section>
   </body>
