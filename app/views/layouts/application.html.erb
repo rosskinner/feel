@@ -7,11 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
-  <body style="background-image:url(<%= "http://payload267.cargocollective.com/1/14/450171/7641443/20130318-DSC_4113-Edit_o.jpg" if (params[:controller] == "session" && params[:action] == "new") %>);">
+  <body style="background-image:url(<%= "http://payload267.cargocollective.com/1/14/450171/7641443/20130318-DSC_4113-Edit_o.jpg" if ((params[:controller] == "session" && params[:action] == "new") || (params[:controller] == "users" && params[:action] == "new"))%>);">
     <section class="container">
-      <header>
-      <h1><a href="/" style="color:<%= "#FFF" if (params[:controller] == "session" && params[:action] == "new") %>;">feel</a></h1>
-        <nav>
+      <header style="background:<%= "#FFF" if ((params[:controller] != "session" && params[:action] != "new") || (params[:controller] != "users" && params[:action] != "new"))%>;">
+      <nav class="left">
+          <ul>
+             <%== smartnav_left %>
+          </ul>
+        </nav>
+      <h1><a href="/" style="color:<%= "#FFF" if ((params[:controller] == "session" && params[:action] == "new") || (params[:controller] == "users" && params[:action] == "new"))%>;">feel</a></h1>
+        <nav class="right">
           <ul>
              <%== smartnav_right %>
           </ul>
@@ -29,5 +34,9 @@
       <% end %>
       </section>
     </section>
+
+    <footer>
+      &copy Rosalind Skinner | wdi5
+    </footer>
   </body>
 </html>

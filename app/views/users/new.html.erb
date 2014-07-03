@@ -1,5 +1,8 @@
+  <div style="color:<%= "#FFF" if (params[:controller] != "users" && params[:action] != "new")%>;">
   <% if @user.errors.any? %>
-    <h1>DO IT PROPERLY YOU BASTARD!</h1>
+   <%= render :partial => 'form' %>
+   <div class="notice" style="color:#373736">
+    <p>DO IT PROPERLY YOU BASTARD!</p>
     <ol>
       <% @user.errors.full_messages.each do |msg| %>
         <li>
@@ -7,4 +10,7 @@
         </li>
       <% end %>
     </ol>
-  <% end %>
+   <% end %>
+   </div>
+   </div>
+

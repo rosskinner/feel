@@ -17,9 +17,20 @@ module ApplicationHelper
   def sign_up
     links = ''
       if !@current_user.present?
-        links += "#{ link_to('Sign up', new_user_path) }"
+        links += "#{ link_to('Sign up', new_user_path, :style => "color:#FFF") }"
       end
       links
   end
+
+  def smartnav_left
+    if @current_user.present?
+    "<span>
+      #{link_to('Edit User',edit_user_path(@current_user))} |
+    </span>
+    <span>
+      #{link_to('Add Location',locations_path(@current_user))}
+    </span>"
+  end
+end
 end
 

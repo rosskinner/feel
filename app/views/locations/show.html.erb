@@ -1,6 +1,12 @@
-<%= render :partial => 'form' %>
-<%= @location.place %>
+<h2><%= @location.place %></h2>
+<%= @time %>
+<div class="results">
+<%  bubble = 0 %>
 <% @moods.each do |mood| %>
-<h2><%= mood.mood %></h2>
-<%= mood.count %>
+<%  bubble += 1%>
+  <div class="bubble no<%=bubble %>">
+    <h3><%= mood.mood %></h3>
+    <span><%= mood.count %></span>
+  </div>
 <% end %>
+</div>

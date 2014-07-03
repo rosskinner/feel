@@ -12,9 +12,10 @@ class LocationsController < ApplicationController
   end
 
   def show
-    @tweet_count = get_moods (params[:id])
+    # @tweet_count = get_moods (params[:id])
     @location = Location.find (params[:id])
-    @moods = @location.moods
+    @moods = @location.moods.take(3)
+    @time = @location.created_at
 
   end
 
@@ -88,9 +89,6 @@ class LocationsController < ApplicationController
 
     @neg_array = @negative_mood.split " OR "
 
-    # @moods.map do |mood|
-    #    @moodcalc = @client.search('#{mood}', :geocode => "#{@location.long},#{@location.lat},#{@location.radius}km")
-    # end
     @positive_tweets = @client.search(@positive_mood, :geocode => "#{@location.long},#{@location.lat},#{@location.radius}km")
     @negative_tweets = @client.search(@nagative_mood, :geocode => "#{@location.long},#{@location.lat},#{@location.radius}km")
 
@@ -103,7 +101,6 @@ class LocationsController < ApplicationController
         end
       end
     end
-    # @pos_count = @pos_count.sort_by{|k,v| v}.reverse.take(3)
 
     @neg_count = {}
     @negative_tweets.entries.each do |tweet|
@@ -114,11 +111,9 @@ class LocationsController < ApplicationController
         end
       end
     end
-    # @neg_count = @neg_count.sort_by{|k,v| v}.reverse.take(3)
-
 
     @tweet_count = @neg_count.merge@pos_count
-    @tweet_count = @tweet_count.sort_by{|k,v| v}.reverse
+    @tweet_count = @tweet_count.sort_by{|k,v| v}.reverse.take(3)
   end
 
   def location_params
