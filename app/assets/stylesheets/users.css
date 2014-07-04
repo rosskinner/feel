@@ -348,4 +348,12 @@ li {
     width:100%;
     left:0;
   }
+
+  .left {
+    left:0;
+  }
+
+  .container {
+    padding:20px;
+  }
 }
