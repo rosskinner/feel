@@ -11,10 +11,8 @@
     <section class="container">
       <header style="background:<%= "#FFF" if ((params[:controller] != "session" && params[:action] != "new") || (params[:controller] != "users" && params[:action] != "new"))%>;">
       <nav class="left">
-          <ul>
-             <%== smartnav_left %>
-          </ul>
-        </nav>
+        <%== smartnav_left %>
+      </nav>
       <h1><a href="/" style="color:<%= "#FFF" if ((params[:controller] == "session" && params[:action] == "new") || (params[:controller] == "users" && params[:action] == "new"))%>;">feel</a></h1>
         <nav class="right">
           <ul>
