@@ -89,7 +89,7 @@ class LocationsController < ApplicationController
     @neg_array = @negative_mood.split " OR "
 
     @positive_tweets = @client.search(@positive_mood, :geocode => "#{@location.long},#{@location.lat},#{@location.radius}km")
-    @negative_tweets = @client.search(@nagative_mood, :geocode => "#{@location.long},#{@location.lat},#{@location.radius}km")
+    @negative_tweets = @client.search(@negative_mood, :geocode => "#{@location.long},#{@location.lat},#{@location.radius}km")
 
     @pos_count = {}
     @positive_tweets.entries.each do |tweet|
