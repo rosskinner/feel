@@ -33,7 +33,7 @@
       </section>
     </section>
 
-    <footer>
+    <footer style="background:<%= "#FFF" if ((params[:controller] == "session" && params[:action] == "new") || (params[:controller] == "users" && params[:action] == "new"))%>;">
       &copy Rosalind Skinner | GA | wdi5
     </footer>
   </body>
