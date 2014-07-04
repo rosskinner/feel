@@ -346,14 +346,13 @@ li {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
   .user {
     width:100%;
-    left:0;
   }
 
   .left {
     left:0;
   }
 
-  .container {
-    padding:20px;
+  .content {
+    padding-bottom:20px;
   }
 }
