@@ -309,6 +309,13 @@ li {
   top:15px;
 }
 
+.about {
+  padding-top: 100px;
+  text-align: justify;
+  font-size: 2em;
+  color: #FFF;
+}
+
 @media (max-width: 780px) {
   .right {
     display: block;
