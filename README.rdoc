@@ -1,6 +1,6 @@
 == FEEL
 
-At an event and want to know how people are feeling about it? Want to know if world events have effected peoples moods? Feel allows users to define the location and area of interest and get the twitter mood of the area.
+At an event and want to know how people are feeling about it? Want to know if world events have affected peoples moods? Feel allows users to define the location and area of interest and get the twitter mood of the area.
 
 Key languages and plugins:
 
