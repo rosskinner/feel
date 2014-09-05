@@ -1,28 +1,15 @@
-== README
+== FEEL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+At an event and want to know how people are feeling about it? Want to know if world events have affected peoples moods? Feel allows users to define the location and area of interest and get the twitter mood of the area.
 
-Things you may want to cover:
+Key languages and plugins:
 
-* Ruby version
+* Ruby on Rails
 
-* System dependencies
+* Twitter Gem
 
-* Configuration
+* Geocoder Gem
 
-* Database creation
+* PostgreSQL
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
