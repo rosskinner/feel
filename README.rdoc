@@ -12,4 +12,3 @@ Key languages and plugins:
 
 * PostgreSQL
 
-<tt>rake doc:app</tt>.
