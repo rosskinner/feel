@@ -23,7 +23,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
+    @location = Location.new
     @locations = @user.locations
+
   end
 
   def edit

@@ -1,6 +1,7 @@
+
+<div class="results">
 <h2><%= @location.place %> | <%= @location.radius %> km </h2>
 <%= time_tag(@time) %>
-<div class="results">
 <%  bubble = 0 %>
 <% @moods.each do |mood| %>
 <%  bubble += 1%>
@@ -10,4 +11,7 @@
 
   </div>
 <% end %>
+</div>
+<div id="showform">
+  <%= render :partial => 'form'%>
 </div>

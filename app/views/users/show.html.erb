@@ -5,9 +5,17 @@
     <h2>
       <%= @user.username %>
     </h2>
+    <%== smartnav_left %>
+
+    </div>
+
+  </section>
+  <section id="locations">
     <h3>
       Locations:
     </h3>
+    <%= render :partial => '/locations/form' %>
+
       <ul>
 
         <% @locations.each do |location|%>
@@ -19,8 +27,5 @@
           </li>
         <% end %>
       </ul>
-    </div>
-
   </section>
-
 <% end %>

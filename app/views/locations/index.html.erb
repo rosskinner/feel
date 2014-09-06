@@ -1,8 +1,10 @@
 <%= render :partial => 'form' %>
-<ul>
-<% @locations.each do |location|%>
-  <li><%= link_to(location.place, location ) %> | Radius: <%= location.radius %></li>
-  <li><%= link_to('Edit', edit_location_path(location)) %> | <%= link_to('Delete', location, :data =>{:confirm=>'Are you sure you want to do delete this location?',:method => :delete }) %>
-  </li>
-<% end %>
-</ul>
+<section class="list">
+  <ul>
+  <% @locations.each do |location|%>
+    <li><%= link_to(location.place, location ) %> | Radius: <%= location.radius %></li>
+    <li><%= link_to('Edit', edit_location_path(location)) %> | <%= link_to('Delete', location, :data =>{:confirm=>'Are you sure you want to do delete this location?',:method => :delete }) %>
+    </li>
+  <% end %>
+  </ul>
+</section>

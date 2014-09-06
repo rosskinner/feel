@@ -13,6 +13,7 @@ body {
   background-position:0;
   background-attachment: fixed;
   color:#373736;
+  background-image: url("http://payload267.cargocollective.com/1/14/450171/7641443/20130318-DSC_4113-Edit_o.jpg");
 }
 
 .container {
@@ -199,7 +200,7 @@ input[value="Login"] {
   width:80%;
   margin:0 auto;
   padding-top:150px;
-  text-align:center;
+  /*text-align:center;*/
   padding-bottom:40px;
 }
 
@@ -248,6 +249,16 @@ li {
 
 .results {
   margin-top: 10px;
+  width: 600px;
+  display: inline-block;
+  text-align: center;
+}
+
+#showform {
+  width: 500px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 100px;
 }
 
 .bubble {
@@ -315,6 +326,19 @@ li {
   font-size: 2em;
   color: #FFF;
 }
+
+#locations {
+  text-align: center;
+  width: 500px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list {
+  width: 300px;
+  margin: 0 auto;
+}
+
 
 @media (max-width: 780px) {
   .right {
