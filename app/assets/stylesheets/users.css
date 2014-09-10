@@ -167,9 +167,7 @@ input[value="Login"] {
 .edit {
   padding:5px;
   border:1px solid;
-  margin:0;
-  position:absolute;
-  right:0;
+  margin:10px;
 }
 
 .users {
